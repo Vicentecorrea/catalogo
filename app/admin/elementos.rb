@@ -14,5 +14,23 @@ ActiveAdmin.register Elemento do
   #   permitted << :other if params[:action] == 'create' && current_user.admin?
   #   permitted
   # end
-  
+
+  form do |f|
+    f.semantic_errors
+    f.inputs do
+      f.input :autor_obra
+      f.input :titulo_capitulo
+      f.input :autor_capitulo
+      f.input :temas
+      f.input :material
+      f.input :idioma
+      f.input :notas
+      f.input :serie
+      f.input :habitacion
+      f.input :biblioteca
+      f.input :codigo_biblioteca
+      f.input :espacio
+      f.actions
+    end
+  end
 end

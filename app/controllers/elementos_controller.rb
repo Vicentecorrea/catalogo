@@ -4,7 +4,21 @@ class ElementosController < ApplicationController
   end
 
   def search
-    @searchable_attributes = ['titulo_obra', 'autor_obra', 'titulo_capitulo', 'autor_capitulo', 'temas', 'idioma', 'codigo_ubicacion']
+    @searchable_attributes = [
+      'titulo_obra',
+      'autor_obra',
+      'titulo_capitulo',
+      'autor_capitulo',
+      'temas',
+      'idioma',
+      'codigo_ubicacion',
+      'material',
+      'notas',
+      'serie',
+      'habitacion',
+      'biblioteca',
+      'espacio',
+    ]
     @searched_text = params[:searched_text].downcase
 
     query_text = ''
