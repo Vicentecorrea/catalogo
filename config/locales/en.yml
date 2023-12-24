@@ -30,4 +30,18 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  titulo_obra: título de obra
+  autor_obra: autor/director de obra
+  titulo_capitulo: título de capítulo
+  autor_capitulo: autor de capítulo
+  temas: temas
+  material: material
+  idioma: idioma
+  notas: notas
+  serie: serie
+  habitacion: habitación
+  biblioteca: biblioteca
+  codigo_biblioteca: código de biblioteca
+  espacio: espacio
+  codigo_ubicacion: código de ubicación
+  ubicacion: ubicación
