@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
   root 'elementos#index'
-  get '/buscar', to: 'elementos#buscar'
+  get '/search', to: 'elementos#search'
 end
