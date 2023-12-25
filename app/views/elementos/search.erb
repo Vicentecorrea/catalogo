@@ -3,7 +3,7 @@ Se han encontrado <%= @results.size %> resultados
   <div style="border: 1px solid black">
   <h2><%= index + 1 %>.<h2>
   <h3><b>
-  <% if elemento.titulo_obra.present? && elemento.titulo_obra.downcase.include?(@searched_text) %>
+  <% if elemento.titulo_obra.present? && elemento.titulo_obra.downcase.include?(@searched_text_downcase) %>
     <%= I18n.t('titulo_obra').capitalize() %>:</b> <span style="color: red;"><%= elemento.titulo_obra %></span>
   <% else %>
     <%= I18n.t('titulo_obra').capitalize() %>:</b> <%= elemento.titulo_obra %>
@@ -12,7 +12,7 @@ Se han encontrado <%= @results.size %> resultados
     
     <h4><b><%= I18n.t('ubicacion').capitalize() %>:</b> <%= elemento.ubicacion %></h4>
     <% @searchable_attributes.reject{|sa| sa == 'titulo_obra'}.each do |attr| %>
-      <% if elemento.send(attr)&.downcase.include?(@searched_text) %>
+      <% if elemento.send(attr)&.downcase.include?(@searched_text_downcase) %>
         <b><%= I18n.t(attr).capitalize() %>:</b> <span style="color: red;"><%= elemento.send(attr) %></span>
       <% else %>
         <b><%= I18n.t(attr).capitalize() %>:</b> <%= elemento.send(attr) %>
